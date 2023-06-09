@@ -220,8 +220,8 @@ def get_report(option="Today", start_=None, end_=None) -> pandas.DataFrame:
                                              "store_name", "courier_name", "courier_park",
                                              "return_reason", "return_comment", "cancel_comment",
                                              "route_id", "lon", "lat", "store_lon", "store_lat", "price_of_goods", "corp_id"])
-    orders_with_pod = get_pod_orders()
     result_frame = result_frame.apply(lambda row: calculate_distance(row), axis=1)
+#     orders_with_pod = get_pod_orders()
 #     result_frame = result_frame.apply(lambda row: check_for_pod(row, orders_with_pod), axis=1)
 #     try:
 #         result_frame.insert(3, 'proof', result_frame.pop('proof'))
