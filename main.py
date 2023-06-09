@@ -231,7 +231,7 @@ def get_report(option="Today", start_=None, end_=None) -> pandas.DataFrame:
 
 
 streamlit_analytics.start_tracking()
-st.markdown(f"# Warehouse routes report")
+st.markdown(f"# BGK routes report")
 st.caption(f"For now use Yesterday option for tracking NDD orders.")
 
 if st.sidebar.button("Refresh data", type="primary"):
