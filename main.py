@@ -235,7 +235,7 @@ st.markdown(f"# BGK routes report")
 st.caption(f"For now use Yesterday option for tracking NDD orders.")
 
 if st.sidebar.button("Refresh data", type="primary"):
-    st.experimental_memo.clear()
+    st.cache_data.clear()
 st.sidebar.caption(f"Page reload doesn't refresh the data.\nInstead, use this button to get a fresh report")
 
 option = st.sidebar.selectbox(
@@ -244,7 +244,7 @@ option = st.sidebar.selectbox(
 )
 
 
-@st.experimental_memo
+@st.cache_data
 def get_cached_report(option):
     report = get_report(option)
     return report
