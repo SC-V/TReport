@@ -25,18 +25,18 @@ def calculate_distance(row):
     return row
 
 
-def get_pod_orders():
-    service = discovery.build('sheets', 'v4', discoveryServiceUrl=
-    'https://sheets.googleapis.com/$discovery/rest?version=v4',
-                              developerKey=SHEET_KEY)
+# def get_pod_orders():
+#     service = discovery.build('sheets', 'v4', discoveryServiceUrl=
+#     'https://sheets.googleapis.com/$discovery/rest?version=v4',
+#                               developerKey=SHEET_KEY)
 
-    spreadsheet_id = SHEET_ID
-    range_ = 'A:A'
+#     spreadsheet_id = SHEET_ID
+#     range_ = 'A:A'
 
-    request = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=range_)
-    response = request.execute()
-    pod_orders = [item for sublist in response["values"] for item in sublist]
-    return pod_orders
+#     request = service.spreadsheets().values().get(spreadsheetId=spreadsheet_id, range=range_)
+#     response = request.execute()
+#     pod_orders = [item for sublist in response["values"] for item in sublist]
+#     return pod_orders
 
 
 def check_for_pod(row, orders_with_pod):
