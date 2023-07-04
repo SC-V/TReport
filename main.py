@@ -10,6 +10,8 @@ import pydeck as pdk
 import streamlit_analytics
 import dateutil.parser
 
+"""Something to commit"""
+
 st.set_page_config(layout="wide")
 
 CLAIM_SECRETS = st.secrets["CLAIM_SECRETS"]
